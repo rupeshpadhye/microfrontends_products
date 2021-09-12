@@ -22,6 +22,8 @@ const ReviewModal = ({
         onCancel={handleCancel}
         footer={null}
         maskClosable={false}
+        className={'review_modal'}
+        closable={false}
       >
       <ReviewForm onSubmit={onSubmit} isSaving={isSaving}/>
     </Modal>
@@ -31,8 +33,10 @@ const ReviewModal = ({
 const Header = ({ title, children }) => {
   return (
     <div className={styles.productHeader}>
-      <h1>{title}</h1>
-      {children}
+      <h1 className={styles.productHeaderTitle}>{title}</h1>
+       <div className={styles.productSubHeader}>
+        {children}
+       </div>
     </div>
   );
 };
@@ -95,9 +99,10 @@ const ProductDetails = () => {
     </div>)
   }
   return product ? (
-    <section>
+    <section className={styles.productDetails}>
+     <div className={styles.productContainer}>
       <Header title={product.title}>
-        <span className={styles.headerRating}>{product.avgRating}</span>
+        <div className={styles.headerRating}>{product.avgRating}</div>
         <Rate allowHalf defaultValue={product.avgRating} disabled />
         <Button
           onClick={() => {
@@ -116,6 +121,7 @@ const ProductDetails = () => {
      />
      <Websocket url={`ws://${window.location.host}/api/products/${identifier}/live`}
      onMessage={handleRealTimeUpdate}/>
+     </div>
     </section>
   ) : (
     isError ? <div className={styles.errorContainer}>Product Not Found</div> : null

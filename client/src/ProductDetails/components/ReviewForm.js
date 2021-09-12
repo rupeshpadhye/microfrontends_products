@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Rate, Form, Input } from "antd";
+import styles from './css/ReviewForm.module.css';
 
 const FormComp = ({
     onSubmit,
@@ -23,21 +24,30 @@ const FormComp = ({
         name= 'review_form'
         colon="false" 
         layout={'vertical'}
+        className={styles.reviewForm}
       >
-        <Form.Item label='Rate'>
+        <Form.Item label={
+          <div className={styles.reviewFormLabel}>
+            Rating
+          </div>
+        } >
           {getFieldDecorator('rating', {
             initialValue: 4
           })(<Rate allowHalf />)}
         </Form.Item>
-        <Form.Item label='Review'>
+        <Form.Item label={
+          <div className={styles.reviewFormLabel}>
+            Review
+          </div>
+        } >
         {getFieldDecorator("note", { initialValue: '' })(
           <Input bordered='false' placeholder='Start typing...' />
         )}
       </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" disabled={isSaving}>
-            Submit
+          <Button type="default" htmlType="submit" disabled={isSaving} className={styles.button}>
+            Submit Review
           </Button>
         </Form.Item>
        </Form>

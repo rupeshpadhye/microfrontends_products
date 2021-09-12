@@ -1,4 +1,13 @@
 
+.productDetails {
+    margin-top: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productContainer {
+    max-width: 600px;
+}
 .loadingContainer {
     height: 100vh;
     align-items: center;
@@ -16,6 +25,61 @@
 }
 
 .headerRating {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 52px;
+    margin-right: 24px;
+    color: #000000;
+}
+
+.productHeader {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #B9B9B9;
+}
+.productHeaderTitle {
+    font-family: Roboto;
+    font-style: normal;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 44px;
+    line-height: 52px;
+    color: #000000;
+}
+
+.productSubHeader {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.productSubHeader button {
+    position: absolute;
+    right: 0;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+:global .review_modal  {
+    border-radius: 20px;
+}
+ 
+:global .review_modal .ant-modal-header {
+    border-bottom:  0px;
+    padding: 48px 48px 40px 48px;
+}
+
+:global .review_modal .ant-modal-body {
+    border-bottom:  0px;
+    padding: 0 48px 48px 48px;
+}
+
+:global .review_modal .ant-modal-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 52px;
+    color: #000000;
 }
