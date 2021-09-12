@@ -39,10 +39,10 @@
  </style>
 </head>
 <script>
-    const PROXY = 'http://localhost:3001/api'
+    const PROXY = '/api'; //'http://localhost:3001/api'
     fetchProducts = function () {
         console.log('fetch products');
-        fetch(`${PROXY}/products`).then(function(res) {
+        fetch(`${PROXY}/products`,{cache: "no-store"}).then(function(res) {
             
             if(res.ok) {
                 res.json().then(function(data) {
@@ -66,10 +66,10 @@
             console.log(e);
         })
     }
-    window.onload = function (event) {
-        fetchProducts();
-    };    
-    
+
+    $( document ).ready(function() {
+      fetchProducts();
+    });
 </script>
 <body>
     <h1>Products</h1>

@@ -1,0 +1,7 @@
+.reviewRow {
+    display: flex;
+}
+
+.reviewList {
+    list-style-type: none;
+}

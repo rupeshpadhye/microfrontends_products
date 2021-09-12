@@ -5,10 +5,11 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "antd": "3.11.6",
-    "react": "16.1.1",
-    "react-dom": "16.1.1",
-    "xml-js": "^1.6.8",
-    "react-scripts": "latest"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "latest",
+    "react-websocket": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

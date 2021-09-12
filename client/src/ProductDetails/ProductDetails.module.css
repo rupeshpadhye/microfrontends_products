@@ -1,0 +1,21 @@
+
+.loadingContainer {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.errorContainer {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+}
+
+.headerRating {
+    font-weight: bold;
+    font-size: xx-large;
+}

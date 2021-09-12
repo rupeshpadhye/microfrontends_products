@@ -1,16 +1,16 @@
-import React from 'react';
-import { Layout } from 'antd';
+import React from "react";
+import { Layout } from "antd";
+import ProductDetails from "./ProductDetails";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-
-const { Header, Content } = Layout;
 
 const App = () => (
-  <Layout className="app">
-    <Layout className="app-background">
-      <Content className="content">
-      New Layout
-      </Content>
-    </Layout>
-  </Layout>
+  <BrowserRouter>
+    <Switch>
+      <Route path={`/products/:identifier`}>
+        <ProductDetails />
+      </Route>
+    </Switch>
+  </BrowserRouter>
 );
 export default App;

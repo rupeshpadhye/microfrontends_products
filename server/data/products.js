@@ -7,16 +7,19 @@ export const products = [
         avgRating: 4,
         reviews: [
             {
+                id: 3434,
                 rating: 4,
-                review: "Must read book to all",
+                note: "Must read book to all",
             },
             {
-                rating: 4,
-                review: "Inspirational",
+                id: 23434234324,
+                rating: 3,
+                note: "Inspirational",
             },
             {
-                rating: 4,
-                review: "Book is good",
+                id: 23434234324,
+                rating: 5,
+                note: "Book is good",
             }
         ]
     },
@@ -28,16 +31,19 @@ export const products = [
         avgRating: 4.1,
         reviews: [
             {
+                id: 343443,
                 rating: 4,
-                review: "Must read book to all",
+                note: "Must read book to all",
             },
             {
+                id: 34344544,
                 rating: 4.2,
-                review: "Inspirational",
+                note: "Inspirational",
             },
             {
+                id: 898989,
                 rating: 4.1,
-                review: "Book is good",
+                note: "Book is good",
             }
         ]
     }
