@@ -119,7 +119,7 @@ const ProductDetails = () => {
         isModalVisible={isModalVisible}
         isSaving={isSaving}
      />
-     <Websocket url={`ws://${window.location.host}/api/products/${identifier}/live`}
+     <Websocket url={`wss://${window.location.host}/api/products/${identifier}/live`}
      onMessage={handleRealTimeUpdate}/>
      </div>
     </section>
